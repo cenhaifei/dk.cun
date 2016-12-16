@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>利群</title>
+	<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="liqun.js"></script>
+	<style type="text/css">
+		ul,li{
+			list-style-type: none;
+		}
+		.main{
+			width: 200px;height: 450px;background-color: #f1f1f1;margin: 50px 50px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="main">
+		<ul dk-for="true">
+			<li>
+				<p dk-bind="Name"></p>
+				<span dk-bind="subNav.title"></span>
+				<span dk-bind="subNav.title"></span>
+				<span dk-bind="subNav.title"></span>
+				<ul>
+					<li>
+						<span dk-bind="subNav.subNav2.title"></span>
+						<span dk-bind="subNav.subNav2.title"></span>
+						<span dk-bind="subNav.subNav2.title"></span>
+					</li>
+				</ul>
+			</li>
+		</ul>		
+	</div>
+</body>
+</html>

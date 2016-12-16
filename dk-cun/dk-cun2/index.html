@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="libs/swiper/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="libs/common/common.css">
+	<link rel="stylesheet" type="text/css" href="libs/page-css/index.css">
+
+	<script type="text/javascript" src="libs/jquery/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="libs/swiper/swiper.min.js"></script>
+	<script type="text/javascript" src="libs/common/common.js"></script>
+	<script type="text/javascript" src="libs/page-js/index.js"></script>
+</head>
+<body>
+	<dk-header url="header.html" replace="false"></dk-header>
+
+	<div class="dk-banner">
+		<div class="sub-nav-width">
+			<!--全部类目-->
+			<div id="mainNav">
+				<ul dk-for="true">
+					<li>
+						<a href="" title="" dk-bind="caption"></a>
+						<span dk-bind="subNav.name.id"></span>
+					</li>
+				</ul>
+				<!-- <div dk-for="true" dk-bind="caption"></div> -->
+			</div>
+			<!--轮播图-->
+			<div>
+				<div class="swiper-container">
+				  <div class="swiper-wrapper">
+				    <div class="swiper-slide"><img src="libs/imgs/lubo01.jpg" alt=""></div>
+				    <div class="swiper-slide"><img src="libs/imgs/lubo02.jpg" alt=""></div>
+				    <div class="swiper-slide"><img src="libs/imgs/lubo03.jpg" alt=""></div>
+				  </div>
+				</div>				
+			</div>
+			<!--便民服务-->
+			<div></div>
+		</div>		
+	</div>
+	<script type="text/javascript">
+	$(function(){
+		var mySwiper = new Swiper('.swiper-container', {
+			autoplay: 5000,//可选选项，自动滑动
+			speed: 2500,
+			autoHeight: true
+		});
+
+		var mainNav = new CreateHtml('#mainNav>*');	
+	});
+	</script>
+</body>
+</html>
